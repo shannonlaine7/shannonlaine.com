@@ -174,6 +174,11 @@
       color: var(--white);
     }
 
+
+    /* =========================
+       HERO IMAGE
+    ========================== */
+
     .hero-image {
       min-height: calc(100vh - 88px);
       overflow: hidden;
@@ -435,6 +440,27 @@
 
 
     /* =========================
+       PROFESSIONAL LINKS
+    ========================== */
+
+    .professional-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .professional-links .button {
+      background: transparent;
+    }
+
+    .professional-links .button:hover {
+      background: var(--blush);
+      border-color: var(--blush);
+      color: var(--white);
+    }
+
+
+    /* =========================
        REPRESENTATION
     ========================== */
 
@@ -609,6 +635,11 @@
         padding: 18px 0;
       }
 
+      .professional-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .content-section {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -636,25 +667,11 @@
 
       <ul class="nav-links">
 
-        <li>
-          <a href="#actor">Actor</a>
-        </li>
-
-        <li>
-          <a href="#filmmaker">Filmmaker</a>
-        </li>
-
-        <li>
-          <a href="#leadership">Leadership</a>
-        </li>
-
-        <li>
-          <a href="#about">About</a>
-        </li>
-
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <li><a href="#actor">Actor</a></li>
+        <li><a href="#filmmaker">Filmmaker</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
 
       </ul>
 
@@ -739,13 +756,9 @@
 
         <article class="pathway">
 
-          <div class="pathway-number">
-            01
-          </div>
+          <div class="pathway-number">01</div>
 
-          <h3>
-            Actor
-          </h3>
+          <h3>Actor</h3>
 
           <p>
             On-camera performance, voiceover, headshots, reels, credits,
@@ -761,13 +774,9 @@
 
         <article class="pathway">
 
-          <div class="pathway-number">
-            02
-          </div>
+          <div class="pathway-number">02</div>
 
-          <h3>
-            Filmmaker
-          </h3>
+          <h3>Filmmaker</h3>
 
           <p>
             Original stories developed through writing, producing,
@@ -783,13 +792,9 @@
 
         <article class="pathway">
 
-          <div class="pathway-number">
-            03
-          </div>
+          <div class="pathway-number">03</div>
 
-          <h3>
-            Leadership
-          </h3>
+          <h3>Leadership</h3>
 
           <p>
             Industry leadership, education, and advocacy focused on
@@ -1046,35 +1051,58 @@
 
               <ul class="simple-list">
 
-                <li>
-                  Teleprompter
-                </li>
-
-                <li>
-                  Public speaking + panel moderation
-                </li>
-
-                <li>
-                  Corporate spokesperson
-                </li>
-
-                <li>
-                  Experienced with children and animals on set
-                </li>
-
-                <li>
-                  Cycling · Running · Soccer · Swimming
-                </li>
-
-                <li>
-                  U.S. Passport + valid driver's license
-                </li>
+                <li>Teleprompter</li>
+                <li>Public speaking + panel moderation</li>
+                <li>Corporate spokesperson</li>
+                <li>Experienced with children and animals on set</li>
+                <li>Cycling · Running · Soccer · Swimming</li>
+                <li>U.S. Passport + valid driver's license</li>
 
               </ul>
 
             </div>
 
 
+
+            <!-- PROFESSIONAL LINKS -->
+
+            <div class="detail-block">
+
+              <div class="detail-label">
+                Connect
+              </div>
+
+              <h3>
+                Professional Links
+              </h3>
+
+              <div class="professional-links">
+
+                <a
+                  class="button"
+                  href="https://imdb.me/ShannonLaine"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View IMDb
+                </a>
+
+                <a
+                  class="button"
+                  href="https://www.instagram.com/theshannonlaine/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Follow on Instagram
+                </a>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- REPRESENTATION -->
 
             <div class="detail-block">
 
