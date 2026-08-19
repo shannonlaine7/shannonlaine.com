@@ -174,11 +174,6 @@
       color: var(--white);
     }
 
-
-    /* =========================
-       HERO IMAGE
-    ========================== */
-
     .hero-image {
       min-height: calc(100vh - 88px);
       overflow: hidden;
@@ -317,9 +312,7 @@
     }
 
 
-    /* =========================
-       HEADSHOTS
-    ========================== */
+    /* HEADSHOTS */
 
     .subheading {
       font-family: Georgia, "Times New Roman", serif;
@@ -360,9 +353,7 @@
     }
 
 
-    /* =========================
-       ACTOR DETAILS
-    ========================== */
+    /* ACTOR DETAILS */
 
     .actor-details-grid {
       display: grid;
@@ -392,9 +383,7 @@
     }
 
 
-    /* =========================
-       CREDITS
-    ========================== */
+    /* CREDITS */
 
     .credit-list {
       border-top: 1px solid var(--line);
@@ -424,9 +413,7 @@
     }
 
 
-    /* =========================
-       TRAINING / SKILLS
-    ========================== */
+    /* TRAINING / SKILLS */
 
     .simple-list {
       list-style: none;
@@ -439,9 +426,7 @@
     }
 
 
-    /* =========================
-       PROFESSIONAL LINKS
-    ========================== */
+    /* PROFESSIONAL LINKS */
 
     .professional-links {
       display: flex;
@@ -449,20 +434,8 @@
       gap: 12px;
     }
 
-    .professional-links .button {
-      background: transparent;
-    }
 
-    .professional-links .button:hover {
-      background: var(--blush);
-      border-color: var(--blush);
-      color: var(--white);
-    }
-
-
-    /* =========================
-       REPRESENTATION
-    ========================== */
+    /* REPRESENTATION */
 
     .representation {
       background: var(--white);
@@ -484,6 +457,189 @@
 
     .representation a {
       border-bottom: 1px solid var(--charcoal);
+    }
+
+
+    /* =========================
+       FILMMAKER SECTION
+    ========================== */
+
+    .filmmaker-section {
+      background: var(--white);
+      padding: 120px 7%;
+    }
+
+    .filmmaker-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .filmmaker-intro {
+      display: grid;
+      grid-template-columns: 32% 68%;
+      gap: 70px;
+      align-items: start;
+      margin-bottom: 90px;
+    }
+
+    .filmmaker-label {
+      color: var(--taupe);
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .filmmaker-intro h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 1;
+      font-weight: normal;
+    }
+
+    .filmmaker-intro-copy {
+      max-width: 760px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--soft-charcoal);
+    }
+
+
+    /* PROJECTS */
+
+    .project {
+      display: grid;
+      grid-template-columns: 44% 56%;
+      gap: 80px;
+      align-items: center;
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .project.reverse {
+      grid-template-columns: 56% 44%;
+    }
+
+    .project.reverse .project-image {
+      order: 2;
+    }
+
+    .project.reverse .project-copy {
+      order: 1;
+    }
+
+    .project-image {
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .project-image.poster img {
+      max-height: 720px;
+      object-fit: contain;
+      background: #111;
+    }
+
+    .project-number {
+      color: var(--taupe);
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .project-copy h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 4vw, 4.3rem);
+      font-weight: normal;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .project-meta {
+      color: var(--taupe);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .project-copy p {
+      color: #57514c;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 610px;
+    }
+
+    .project-status {
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+      color: var(--taupe);
+    }
+
+
+    /* SKOPOS BLOCK */
+
+    .skopos-block {
+      background: var(--charcoal);
+      color: var(--cream);
+      margin-top: 90px;
+      padding: 85px 8%;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .skopos-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .skopos-logo img {
+      width: 100%;
+      max-width: 340px;
+      display: block;
+    }
+
+    .skopos-copy .detail-label {
+      color: #b8aaa1;
+    }
+
+    .skopos-copy h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      font-weight: normal;
+      margin-bottom: 22px;
+    }
+
+    .skopos-copy p {
+      max-width: 640px;
+      color: #d2cbc5;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .button.light {
+      border-color: var(--cream);
+      color: var(--cream);
+    }
+
+    .button.light:hover {
+      background: var(--cream);
+      border-color: var(--cream);
+      color: var(--charcoal);
     }
 
 
@@ -620,10 +776,6 @@
         gap: 30px;
       }
 
-      .headshot-card img {
-        aspect-ratio: 4 / 5;
-      }
-
       .actor-details-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -638,6 +790,42 @@
       .professional-links {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .filmmaker-section {
+        padding: 85px 7%;
+      }
+
+      .filmmaker-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 45px;
+      }
+
+      .project,
+      .project.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 65px 0;
+      }
+
+      .project.reverse .project-image,
+      .project.reverse .project-copy {
+        order: initial;
+      }
+
+      .project-image.poster img {
+        max-height: none;
+      }
+
+      .skopos-block {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 65px 8%;
+      }
+
+      .skopos-logo img {
+        max-width: 260px;
       }
 
       .content-section {
@@ -666,13 +854,11 @@
       </a>
 
       <ul class="nav-links">
-
         <li><a href="#actor">Actor</a></li>
         <li><a href="#filmmaker">Filmmaker</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-
       </ul>
 
     </nav>
@@ -896,8 +1082,6 @@
         <div class="actor-details-grid">
 
 
-          <!-- LEFT COLUMN -->
-
           <div>
 
 
@@ -1000,8 +1184,6 @@
 
 
 
-          <!-- RIGHT COLUMN -->
-
           <div>
 
 
@@ -1050,21 +1232,17 @@
               </h3>
 
               <ul class="simple-list">
-
                 <li>Teleprompter</li>
                 <li>Public speaking + panel moderation</li>
                 <li>Corporate spokesperson</li>
                 <li>Experienced with children and animals on set</li>
                 <li>Cycling · Running · Soccer · Swimming</li>
                 <li>U.S. Passport + valid driver's license</li>
-
               </ul>
 
             </div>
 
 
-
-            <!-- PROFESSIONAL LINKS -->
 
             <div class="detail-block">
 
@@ -1101,8 +1279,6 @@
             </div>
 
 
-
-            <!-- REPRESENTATION -->
 
             <div class="detail-block">
 
@@ -1151,17 +1327,174 @@
 
     <!-- FILMMAKER -->
 
-    <section class="content-section" id="filmmaker">
+    <section class="filmmaker-section" id="filmmaker">
 
-      <h2>
-        Filmmaker
-      </h2>
+      <div class="filmmaker-container">
 
-      <p>
-        Original storytelling through writing and producing, with a focus
-        on compelling work that connects with audiences and creates
-        meaningful opportunities for Midwest talent.
-      </p>
+
+        <div class="filmmaker-intro">
+
+          <div>
+
+            <div class="filmmaker-label">
+              Create
+            </div>
+
+            <h2>
+              Filmmaker
+            </h2>
+
+          </div>
+
+
+          <p class="filmmaker-intro-copy">
+            Shannon develops character-driven stories as a writer and producer,
+            creating work that explores connection, identity, family, and the
+            moments that shape us while building meaningful opportunities for
+            Midwest artists.
+          </p>
+
+        </div>
+
+
+
+        <!-- DEATHBOX -->
+
+        <article class="project">
+
+          <div class="project-image poster">
+
+            <img
+              src="Deathbox Placeholder.png"
+              alt="Deathbox feature film placeholder artwork"
+            >
+
+          </div>
+
+
+          <div class="project-copy">
+
+            <div class="project-number">
+              01 · Featured Project
+            </div>
+
+            <h3>
+              Deathbox
+            </h3>
+
+            <div class="project-meta">
+              Feature Film · Writer · Producer · Actor
+            </div>
+
+            <p>
+              A deeply personal dramedy about a daughter, her father,
+              and the end-of-life conversations that reveal what matters
+              most—with humor, heart, and the practical absurdities of
+              preparing for goodbye.
+            </p>
+
+            <div class="project-status">
+              In Development
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ONE MOVE AT A TIME -->
+
+        <article class="project reverse">
+
+          <div class="project-image poster">
+
+            <img
+              src="one-move-at-a-time-poster.png"
+              alt="One Move at a Time short film poster"
+            >
+
+          </div>
+
+
+          <div class="project-copy">
+
+            <div class="project-number">
+              02 · Short Film
+            </div>
+
+            <h3>
+              One Move at a Time
+            </h3>
+
+            <div class="project-meta">
+              Short Film · Producer · Actor
+            </div>
+
+            <p>
+              From concept to completion in just two weeks as part of COHORT NYC’s
+              St. Louis Film Lab, <em>One Move at a Time</em> was developed within
+              the genre of historical revisionism and the prompt: create a world
+              that does not exist, but one you would want to see. The film went on
+              to become an official selection of both Q-Fest and the St. Louis
+              Filmmakers Showcase.
+            </p>
+
+            <div class="project-status">
+              Official Selection · Q-Fest · St. Louis Filmmakers Showcase
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- SKOPOS FILMS -->
+
+        <section class="skopos-block">
+
+          <div class="skopos-logo">
+
+            <img
+              src="skopos-films-logo.png"
+              alt="Skopos Films logo"
+            >
+
+          </div>
+
+
+          <div class="skopos-copy">
+
+            <div class="detail-label">
+              Production Company
+            </div>
+
+            <h3>
+              Skopos Films
+            </h3>
+
+            <p>
+              Shannon founded Skopos Films to develop compelling,
+              purpose-driven stories while creating meaningful work for
+              Midwest actors, filmmakers, and crew.
+            </p>
+
+            <a
+              class="button light"
+              href="https://skoposfilms.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Skopos Films
+            </a>
+
+          </div>
+
+        </section>
+
+
+      </div>
 
     </section>
 
