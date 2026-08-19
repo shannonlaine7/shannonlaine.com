@@ -666,7 +666,102 @@
 
 
     /* =========================
-       LOWER CONTENT
+       LEADERSHIP
+    ========================== */
+
+    .leadership-section {
+      background: var(--cream);
+      padding: 120px 7%;
+    }
+
+    .leadership-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .leadership-intro {
+      display: grid;
+      grid-template-columns: 32% 68%;
+      gap: 70px;
+      align-items: start;
+      margin-bottom: 85px;
+    }
+
+    .leadership-label {
+      color: var(--taupe);
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .leadership-intro h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 1;
+      font-weight: normal;
+    }
+
+    .leadership-intro-copy {
+      max-width: 760px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--soft-charcoal);
+    }
+
+
+    /* LEADERSHIP PILLARS */
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .leadership-card {
+      padding: 55px 42px 60px;
+    }
+
+    .leadership-card + .leadership-card {
+      border-left: 1px solid var(--line);
+    }
+
+    .leadership-number {
+      color: var(--taupe);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .leadership-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .leadership-role {
+      color: var(--taupe);
+      font-size: 0.7rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .leadership-card p {
+      color: #57514c;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+
+    /* =========================
+       ABOUT
     ========================== */
 
     .content-section {
@@ -847,6 +942,29 @@
         max-width: 260px;
       }
 
+      .leadership-section {
+        padding: 85px 7%;
+      }
+
+      .leadership-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 55px;
+      }
+
+      .leadership-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .leadership-card {
+        padding: 45px 20px;
+      }
+
+      .leadership-card + .leadership-card {
+        border-left: none;
+        border-top: 1px solid var(--line);
+      }
+
       .content-section {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -865,6 +983,7 @@
   <!-- NAVIGATION -->
 
   <header>
+
     <nav>
 
       <a class="logo" href="#">
@@ -880,6 +999,7 @@
       </ul>
 
     </nav>
+
   </header>
 
 
@@ -950,6 +1070,7 @@
 
       <div class="pathway-grid">
 
+
         <article class="pathway">
 
           <div class="pathway-number">01</div>
@@ -1003,6 +1124,7 @@
 
         </article>
 
+
       </div>
 
     </section>
@@ -1050,32 +1172,24 @@
         <div class="headshot-grid">
 
           <figure class="headshot-card theatrical">
-
             <img
               src="shannon-laine-headshot-theatrical.JPG"
               alt="Shannon Laine theatrical headshot"
             >
-
           </figure>
 
-
           <figure class="headshot-card character">
-
             <img
               src="shannon-laine-headshot-character.png"
               alt="Shannon Laine character headshot"
             >
-
           </figure>
 
-
           <figure class="headshot-card commercial">
-
             <img
               src="shannon-laine-headshot-commercial.jpg"
               alt="Shannon Laine commercial headshot"
             >
-
           </figure>
 
         </div>
@@ -1505,17 +1619,126 @@
 
     <!-- LEADERSHIP -->
 
-    <section class="content-section" id="leadership">
+    <section class="leadership-section" id="leadership">
 
-      <h2>
-        Leadership
-      </h2>
+      <div class="leadership-container">
 
-      <p>
-        Industry leadership centered on connection, education,
-        collaboration, professional development, advocacy, and expanding
-        creative opportunity throughout the Midwest.
-      </p>
+
+        <div class="leadership-intro">
+
+
+          <div>
+
+            <div class="leadership-label">
+              Lead
+            </div>
+
+            <h2>
+              Leadership
+            </h2>
+
+          </div>
+
+
+          <p class="leadership-intro-copy">
+            Shannon’s leadership work is rooted in connection, advocacy,
+            and creating opportunity. Across labor, film organizations,
+            and the broader creative community, she works to strengthen
+            the relationships, resources, and infrastructure that help
+            Midwest artists and productions thrive.
+          </p>
+
+
+        </div>
+
+
+
+        <div class="leadership-grid">
+
+
+          <!-- SAG-AFTRA -->
+
+          <article class="leadership-card">
+
+            <div class="leadership-number">
+              01 · SAG-AFTRA Leadership
+            </div>
+
+            <h3>
+              Missouri Valley Local President
+            </h3>
+
+            <div class="leadership-role">
+              Member · Industry · Union Leadership
+            </div>
+
+            <p>
+              Leads member engagement, organizing, education and workshops,
+              producer and filmmaker outreach, and efforts to expand
+              professional union opportunities across the Missouri Valley region.
+            </p>
+
+          </article>
+
+
+
+          <!-- CINEMA ST. LOUIS -->
+
+          <article class="leadership-card">
+
+            <div class="leadership-number">
+              02 · Cinema St. Louis
+            </div>
+
+            <h3>
+              Vice Chair, Board of Directors
+            </h3>
+
+            <div class="leadership-role">
+              Fundraising · Hospitality · Industry Engagement
+            </div>
+
+            <p>
+              Supports the organization’s mission through board leadership,
+              fundraising, hospitality, industry engagement, and participation
+              as a moderator and speaker on film and industry panels.
+            </p>
+
+          </article>
+
+
+
+          <!-- CREATIVE COMMUNITY -->
+
+          <article class="leadership-card">
+
+            <div class="leadership-number">
+              03 · Creative Community
+            </div>
+
+            <h3>
+              Building a Stronger Midwest Film Ecosystem
+            </h3>
+
+            <div class="leadership-role">
+              Partnerships · Advocacy · Infrastructure
+            </div>
+
+            <p>
+              Builds partnerships among filmmakers, industry organizations,
+              and community stakeholders; wrote and submitted two local film
+              tax incentive proposals; and advocates for the infrastructure,
+              investment, and collaboration needed to grow sustainable
+              regional production.
+            </p>
+
+          </article>
+
+
+        </div>
+
+
+      </div>
 
     </section>
 
