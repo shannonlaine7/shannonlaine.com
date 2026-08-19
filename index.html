@@ -125,6 +125,17 @@
       color: var(--white);
     }
 
+    .button.light {
+      border-color: var(--cream);
+      color: var(--cream);
+    }
+
+    .button.light:hover {
+      background: var(--cream);
+      border-color: var(--cream);
+      color: var(--charcoal);
+    }
+
 
     /* =========================
        HERO
@@ -428,7 +439,7 @@
     }
 
 
-    /* COMMERCIAL FULL-WIDTH ROW */
+    /* COMMERCIAL FULL WIDTH */
 
     .actor-wide-row {
       padding: 70px 0;
@@ -444,7 +455,7 @@
     }
 
 
-    /* ACTOR BOTTOM ROW */
+    /* ACTOR BOTTOM */
 
     .actor-bottom-grid {
       display: grid;
@@ -653,17 +664,6 @@
       margin-bottom: 32px;
     }
 
-    .button.light {
-      border-color: var(--cream);
-      color: var(--cream);
-    }
-
-    .button.light:hover {
-      background: var(--cream);
-      border-color: var(--cream);
-      color: var(--charcoal);
-    }
-
 
     /* =========================
        LEADERSHIP
@@ -709,9 +709,6 @@
       line-height: 1.7;
       color: var(--soft-charcoal);
     }
-
-
-    /* LEADERSHIP PILLARS */
 
     .leadership-grid {
       display: grid;
@@ -828,27 +825,147 @@
 
 
     /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-section {
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 115px 7% 90px;
+    }
+
+    .contact-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .contact-intro {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 75px;
+    }
+
+    .contact-label {
+      color: #b8aaa1;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .contact-intro h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: normal;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .contact-intro p {
+      color: #d2cbc5;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #4b4744;
+      border-bottom: 1px solid #4b4744;
+    }
+
+    .contact-card {
+      padding: 50px 40px 55px;
+    }
+
+    .contact-card + .contact-card {
+      border-left: 1px solid #4b4744;
+    }
+
+    .contact-card-label {
+      color: #b8aaa1;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .contact-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .contact-card p {
+      color: #d2cbc5;
+      line-height: 1.75;
+      margin-bottom: 6px;
+    }
+
+    .contact-card a {
+      color: var(--cream);
+      border-bottom: 1px solid #8f8580;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-card a:hover {
+      border-color: var(--cream);
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-top: 55px;
+    }
+
+    .contact-links a {
+      color: #d2cbc5;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .contact-links a:hover {
+      color: var(--cream);
+      border-color: var(--cream);
+    }
+
+
+    /* =========================
        FOOTER
     ========================== */
 
     footer {
-      padding: 70px 7%;
-      background: var(--charcoal);
+      padding: 36px 7%;
+      background: #11100f;
       color: var(--cream);
       text-align: center;
+      border-top: 1px solid #2b2927;
     }
 
-    footer .name {
+    footer .footer-name {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 2rem;
-      margin-bottom: 12px;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
     }
 
     footer p {
-      font-size: 0.72rem;
+      font-size: 0.66rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #bdb5af;
+      color: #9f9690;
+    }
+
+    footer .copyright {
+      margin-top: 8px;
+      letter-spacing: 0.08em;
+      text-transform: none;
     }
 
 
@@ -1016,6 +1133,31 @@
 
       .about-copy .about-lead {
         font-size: 1.18rem;
+      }
+
+      .contact-section {
+        padding: 85px 7% 70px;
+      }
+
+      .contact-intro {
+        margin-bottom: 50px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 40px 20px;
+      }
+
+      .contact-card + .contact-card {
+        border-left: none;
+        border-top: 1px solid #4b4744;
+      }
+
+      .contact-links {
+        gap: 20px;
       }
 
     }
@@ -1241,6 +1383,8 @@
 
 
 
+        <!-- CREDITS + TRAINING -->
+
         <div class="actor-top-grid">
 
 
@@ -1380,6 +1524,8 @@
 
 
 
+        <!-- COMMERCIAL + CORPORATE -->
+
         <div class="actor-wide-row">
 
           <div class="detail-label">
@@ -1399,6 +1545,8 @@
         </div>
 
 
+
+        <!-- LINKS + REPRESENTATION -->
 
         <div class="actor-bottom-grid">
 
@@ -1514,6 +1662,8 @@
 
 
 
+        <!-- DEATHBOX -->
+
         <article class="project">
 
           <div class="project-image poster">
@@ -1556,6 +1706,8 @@
         </article>
 
 
+
+        <!-- ONE MOVE AT A TIME -->
 
         <article class="project reverse">
 
@@ -1601,6 +1753,8 @@
         </article>
 
 
+
+        <!-- SKOPOS FILMS -->
 
         <section class="skopos-block">
 
@@ -1822,20 +1976,179 @@
     </section>
 
 
+
+    <!-- CONTACT -->
+
+    <section class="contact-section" id="contact">
+
+      <div class="contact-container">
+
+
+        <div class="contact-intro">
+
+          <div class="contact-label">
+            Contact
+          </div>
+
+          <h2>
+            Let’s Connect
+          </h2>
+
+          <p>
+            For acting, filmmaking, media, speaking, leadership,
+            and creative collaboration inquiries.
+          </p>
+
+        </div>
+
+
+
+        <div class="contact-grid">
+
+
+          <!-- ACTING -->
+
+          <div class="contact-card">
+
+            <div class="contact-card-label">
+              Acting + Booking
+            </div>
+
+            <h3>
+              Talent Plus
+            </h3>
+
+            <p>
+              Caitlin Tadlock
+            </p>
+
+            <p>
+              <a href="tel:3144219400">
+                314-421-9400
+              </a>
+            </p>
+
+            <p>
+              <a href="mailto:caitlin.tadlock@talent-plus.com">
+                caitlin.tadlock@talent-plus.com
+              </a>
+            </p>
+
+          </div>
+
+
+
+          <!-- FILMMAKING -->
+
+          <div class="contact-card">
+
+            <div class="contact-card-label">
+              Filmmaking + Collaboration
+            </div>
+
+            <h3>
+              Creative Inquiries
+            </h3>
+
+            <p>
+              For filmmaking, speaking, leadership,
+              partnerships, and general inquiries.
+            </p>
+
+            <p>
+              <a href="mailto:hello@shannonlaine.com">
+                hello@shannonlaine.com
+              </a>
+            </p>
+
+          </div>
+
+
+
+          <!-- PRESS -->
+
+          <div class="contact-card">
+
+            <div class="contact-card-label">
+              Press + Media
+            </div>
+
+            <h3>
+              Media Inquiries
+            </h3>
+
+            <p>
+              For interviews, media requests,
+              features, and press inquiries.
+            </p>
+
+            <p>
+              <a href="mailto:press@shannonlaine.com">
+                press@shannonlaine.com
+              </a>
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- PROFESSIONAL LINKS -->
+
+        <div class="contact-links">
+
+          <a
+            href="https://imdb.me/ShannonLaine"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            IMDb
+          </a>
+
+          <a
+            href="https://www.instagram.com/theshannonlaine/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="https://skoposfilms.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Skopos Films
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
   </main>
 
 
 
   <!-- FOOTER -->
 
-  <footer id="contact">
+  <footer>
 
-    <div class="name">
+    <div class="footer-name">
       Shannon Laine
     </div>
 
     <p>
       Actor · Writer · Filmmaker
+    </p>
+
+    <p class="copyright">
+      © 2026 Shannon Laine
     </p>
 
   </footer>
