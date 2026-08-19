@@ -764,26 +764,66 @@
        ABOUT
     ========================== */
 
-    .content-section {
-      padding: 110px 8%;
+    .about-section {
+      background: var(--white);
+      padding: 120px 7%;
+    }
+
+    .about-container {
       max-width: 1300px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 32% 68%;
       gap: 70px;
-      border-bottom: 1px solid var(--line);
+      align-items: start;
     }
 
-    .content-section h2 {
+    .about-label {
+      color: var(--taupe);
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .about-heading {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 2.6rem;
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 1;
       font-weight: normal;
     }
 
-    .content-section p {
-      max-width: 700px;
+    .about-copy {
+      max-width: 780px;
+    }
+
+    .about-copy p {
+      color: #57514c;
       font-size: 1.05rem;
-      color: #5a5551;
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+
+    .about-copy .about-lead {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.32rem;
+      line-height: 1.7;
+      color: var(--soft-charcoal);
+    }
+
+    .about-copy .about-closing {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.22rem;
+      line-height: 1.7;
+      color: var(--soft-charcoal);
+      margin-top: 38px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .about-copy .about-closing strong {
+      font-weight: normal;
+      color: var(--charcoal);
     }
 
 
@@ -965,10 +1005,17 @@
         border-top: 1px solid var(--line);
       }
 
-      .content-section {
+      .about-section {
+        padding: 85px 7%;
+      }
+
+      .about-container {
         grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 75px 8%;
+        gap: 35px;
+      }
+
+      .about-copy .about-lead {
+        font-size: 1.18rem;
       }
 
     }
@@ -1163,8 +1210,6 @@
 
 
 
-        <!-- HEADSHOTS -->
-
         <h3 class="subheading">
           Headshots
         </h3>
@@ -1195,8 +1240,6 @@
         </div>
 
 
-
-        <!-- ROW 1: CREDITS | TRAINING + SKILLS -->
 
         <div class="actor-top-grid">
 
@@ -1337,8 +1380,6 @@
 
 
 
-        <!-- ROW 2: COMMERCIAL + CORPORATE -->
-
         <div class="actor-wide-row">
 
           <div class="detail-label">
@@ -1358,8 +1399,6 @@
         </div>
 
 
-
-        <!-- ROW 3: LINKS | REPRESENTATION -->
 
         <div class="actor-bottom-grid">
 
@@ -1475,8 +1514,6 @@
 
 
 
-        <!-- DEATHBOX -->
-
         <article class="project">
 
           <div class="project-image poster">
@@ -1519,8 +1556,6 @@
         </article>
 
 
-
-        <!-- ONE MOVE AT A TIME -->
 
         <article class="project reverse">
 
@@ -1566,8 +1601,6 @@
         </article>
 
 
-
-        <!-- SKOPOS FILMS -->
 
         <section class="skopos-block">
 
@@ -1656,8 +1689,6 @@
         <div class="leadership-grid">
 
 
-          <!-- SAG-AFTRA -->
-
           <article class="leadership-card">
 
             <div class="leadership-number">
@@ -1669,7 +1700,7 @@
             </h3>
 
             <div class="leadership-role">
-              Member · Industry · Union Leadership
+              Member Engagement · Education · Industry Outreach
             </div>
 
             <p>
@@ -1681,8 +1712,6 @@
           </article>
 
 
-
-          <!-- CINEMA ST. LOUIS -->
 
           <article class="leadership-card">
 
@@ -1707,8 +1736,6 @@
           </article>
 
 
-
-          <!-- CREATIVE COMMUNITY -->
 
           <article class="leadership-card">
 
@@ -1746,17 +1773,51 @@
 
     <!-- ABOUT -->
 
-    <section class="content-section" id="about">
+    <section class="about-section" id="about">
 
-      <h2>
-        About
-      </h2>
+      <div class="about-container">
 
-      <p>
-        Shannon Laine is an actor, writer, and filmmaker based in St. Louis,
-        working across performance, original storytelling, filmmaking,
-        and creative industry leadership.
-      </p>
+
+        <div>
+
+          <div class="about-label">
+            About
+          </div>
+
+          <h2 class="about-heading">
+            Shannon Laine
+          </h2>
+
+        </div>
+
+
+        <div class="about-copy">
+
+          <p class="about-lead">
+            Shannon Laine is a St. Louis-based actor, writer, filmmaker,
+            and industry leader whose work moves between performance,
+            storytelling, and building opportunity for others.
+          </p>
+
+          <p>
+            After years working in front of the camera, Shannon began expanding
+            behind it, producing independent films, developing original stories,
+            and founding Skopos Films. That evolution grew from a desire not only
+            to pursue meaningful creative work, but to help create more of it
+            in the Midwest.
+          </p>
+
+          <p class="about-closing">
+            Whether performing a role, developing a film, or bringing people
+            together around a shared goal, the through-line is the same:
+            <strong>tell meaningful stories, create opportunity, and leave the
+            community stronger than she found it.</strong>
+          </p>
+
+        </div>
+
+
+      </div>
 
     </section>
 
