@@ -127,7 +127,38 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
+.menu-toggle {
+  display: none;
+  width: 34px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
 
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--charcoal);
+  transition: 0.25s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
     .nav-links a {
       transition: opacity 0.2s ease;
     }
@@ -1013,17 +1044,54 @@
     @media (max-width: 900px) {
 
       nav {
-        padding: 20px 6%;
-        min-height: 76px;
-      }
+  padding: 20px 6%;
+  min-height: 76px;
+  position: relative;
+}
 
       .logo {
         font-size: 1.05rem;
       }
 
-      .nav-links {
-        display: none;
-      }
+     .menu-toggle {
+  display: flex;
+}
+
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--cream);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 15px 6% 25px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 20px rgba(26, 25, 24, 0.06);
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+.nav-links li {
+  width: 100%;
+}
+
+.nav-links a {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-links li:last-child a {
+  border-bottom: none;
+}
 
       .hero {
         display: flex;
@@ -1212,11 +1280,22 @@
 
     <nav>
 
-      <a class="logo" href="#">
-        SHANNON LAINE
-      </a>
+  <a class="logo" href="#">
+    SHANNON LAINE
+  </a>
 
-      <ul class="nav-links">
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links">
         <li><a href="#actor">Actor</a></li>
         <li><a href="#filmmaker">Filmmaker</a></li>
         <li><a href="#leadership">Leadership</a></li>
@@ -2189,7 +2268,40 @@
 
   </footer>
 
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navigationLinks = document.querySelectorAll('.nav-links a');
 
+  menuToggle.addEventListener('click', function () {
+    const isOpen = navLinks.classList.toggle('open');
+
+    menuToggle.classList.toggle('active', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.setAttribute(
+      'aria-label',
+      isOpen ? 'Close navigation menu' : 'Open navigation menu'
+    );
+  });
+
+  navigationLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    }
+  });
+</script>
 </body>
 
 </html>
