@@ -1014,7 +1014,41 @@
       border-color: var(--cream);
     }
 
+/* =========================
+   PRIVACY
+========================== */
 
+.privacy-section {
+  background: #11100f;
+  color: #b8aaa1;
+  padding: 45px 7%;
+  border-top: 1px solid #2b2927;
+}
+
+.privacy-container {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.privacy-container h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+
+.privacy-container p {
+  font-size: 0.78rem;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.privacy-container a {
+  color: var(--cream);
+  border-bottom: 1px solid #8f8580;
+}
     /* =========================
        FOOTER
     ========================== */
@@ -1045,7 +1079,26 @@
       letter-spacing: 0.08em;
       text-transform: none;
     }
+<p class="copyright">
+  © 2026 Shannon Laine
+</p>
 
+<p class="privacy-link">
+  <a href="#privacy">Privacy</a>
+</p>
+    footer .privacy-link {
+  margin-top: 8px;
+}
+
+footer .privacy-link a {
+  color: #9f9690;
+  text-transform: none;
+  letter-spacing: 0.08em;
+}
+
+footer .privacy-link a:hover {
+  color: var(--cream);
+}
 #actor,
 #filmmaker,
 #leadership,
@@ -2286,7 +2339,32 @@ button:focus-visible {
   </main>
 
 
+<!-- PRIVACY -->
 
+<section class="privacy-section" id="privacy">
+
+  <div class="privacy-container">
+
+    <h2>Privacy</h2>
+
+    <p>
+      This website uses Google Analytics to understand website traffic and
+      how visitors interact with the site. Google Analytics may collect
+      information such as browser and device type, approximate location,
+      pages viewed, and site interactions using cookies or similar technologies.
+      This information is used to help improve the website.
+    </p>
+
+    <p>
+      ShannonLaine.com does not sell personal information. For questions
+      about this privacy notice, contact
+      <a href="mailto:hello@shannonlaine.com">hello@shannonlaine.com</a>.
+    </p>
+
+  </div>
+
+</section>
+  
   <!-- FOOTER -->
 
   <footer>
