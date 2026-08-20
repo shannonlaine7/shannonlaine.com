@@ -1036,13 +1036,24 @@
       text-transform: none;
     }
 
-
+#actor,
+#filmmaker,
+#leadership,
+#about,
+#contact {
+  scroll-margin-top: 90px;
+}
     /* =========================
        MOBILE
     ========================== */
 
     @media (max-width: 900px) {
-
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--cream);
+}
       nav {
   padding: 20px 6%;
   min-height: 76px;
