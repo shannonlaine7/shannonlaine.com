@@ -165,8 +165,8 @@
     }
 
     .nav-links a:hover {
-      opacity: 0.5;
-    }
+  color: var(--taupe);
+}
 
 
     /* =========================
@@ -1049,6 +1049,19 @@ button:focus-visible {
   outline: 3px solid #786c64;
   outline-offset: 4px;
 }
+    .skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 12px;
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 12px 18px;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  left: 12px;
+}
     /* =========================
        MOBILE
     ========================== */
@@ -1284,30 +1297,33 @@ button:focus-visible {
 
 
 <body>
-
+<a class="skip-link" href="#main-content">
+  Skip to main content
+</a>
 
   <!-- NAVIGATION -->
 
   <header>
 
-    <nav>
+    <nav aria-label="Primary navigation">
 
   <a class="logo" href="#">
     SHANNON LAINE
   </a>
 
   <button
-    class="menu-toggle"
-    type="button"
-    aria-label="Open navigation menu"
-    aria-expanded="false"
-  >
+  class="menu-toggle"
+  type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+  aria-controls="primary-navigation"
+>
     <span></span>
     <span></span>
     <span></span>
   </button>
 
-  <ul class="nav-links">
+  <ul class="nav-links" id="primary-navigation">
         <li><a href="#actor">Actor</a></li>
         <li><a href="#filmmaker">Filmmaker</a></li>
         <li><a href="#leadership">Leadership</a></li>
@@ -1321,7 +1337,7 @@ button:focus-visible {
 
 
 
-  <main>
+  <main id="main-content">
 
 
     <!-- HERO -->
@@ -2306,13 +2322,14 @@ button:focus-visible {
   });
 
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      navLinks.classList.remove('open');
-      menuToggle.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Open navigation menu');
-    }
-  });
+  if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+    navLinks.classList.remove('open');
+    menuToggle.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    menuToggle.focus();
+  }
+});
 </script>
 </body>
 
