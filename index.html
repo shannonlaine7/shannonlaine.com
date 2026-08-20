@@ -56,7 +56,7 @@
       --white: #ffffff;
       --charcoal: #1a1918;
       --soft-charcoal: #34312f;
-      --taupe: #8e8178;
+      --taupe: #786c64;
       --blush: #b88e88;
       --line: #d8d0c9;
     }
@@ -189,10 +189,10 @@
     }
 
     .button:hover {
-      background: var(--blush);
-      border-color: var(--blush);
-      color: var(--white);
-    }
+  background: var(--blush);
+  border-color: var(--blush);
+  color: var(--charcoal);
+}
 
     .button.light {
       border-color: var(--cream);
@@ -1043,6 +1043,11 @@
 #about,
 #contact {
   scroll-margin-top: 90px;
+}
+    a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #786c64;
+  outline-offset: 4px;
 }
     /* =========================
        MOBILE
